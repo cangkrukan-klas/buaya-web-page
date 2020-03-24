@@ -1,0 +1,37 @@
+{
+  "name": "buaya-web-page",
+  "version": "1.0.0",
+  "description": "Halaman web untuk buaya.klas.or.id",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fadhilyori/buaya-web-page"
+  },
+  "bugs": {
+    "url": "https://github.com/fadhilyori/buaya-web-page/issues",
+    "email": "fadhil4812@gmail.com"
+  },
+  "homepage": "https://github.com/fadhilyori/buaya-web-page#readme",
+  "author": "Fadhil Yori Hibatullah <fadhil4812@gmail.com>",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "lite-server": "^2.5.4",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch",
+    "serve": "lite-server --baseDir='./dist'",
+    "dev": "lite-server --baseDir='./src'",
+    "clean:dist": "gulp cleanDist"
+  }
+}
