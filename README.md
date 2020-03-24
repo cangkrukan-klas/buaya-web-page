@@ -11,6 +11,7 @@ Halaman repositori [buaya](https://buaya.klas.or.id) bisa dilihat pada halaman r
 ## Persiapan
 
 - Jalankan `npm install` untuk melakukan pemasangan paket-paket npm yang dibutuhkan untuk melakukan build kode sumber.
+- Buat 4 folder didalam src yang akan digunakan untuk development (jika tidak ada) yaitu: `scss`, `js`, `images`, dan `fonts`.
 
 
 ## Perintah NPM
