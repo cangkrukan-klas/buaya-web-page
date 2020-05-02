@@ -45,7 +45,7 @@
 	<header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
 		<div class="container d-flex align-items-center">
 
-			<div class="logo mr-auto">
+			<div class="logo mx-auto">
 				<h1 class="text-light"><a href="index.html">KELOMPOK LINUX AREK SUROBOYO</a></h1>
 			</div>
 
@@ -59,19 +59,19 @@
 			<!-- Slide 1 -->
 			<div class="carousel-item active">
 				<div class="carousel-container">
-					<h2 class="animated fadeInDown">Selamat datang di <span>Buaya</span></h2>
-					<p class="animated fadeInUp">Selamat Datang di <span>Buaya</span></a>
-						mirror ini merupakan
-						persembahan KLAS kepada
-						komunitas F/OSS (Free/Open Source Software).
-
-						Pada saat ini kami menyediakan repositori Centos,Debian,Ubuntu,openSUSE, dan LibreOffice. Selain
-						itu kami juga menyediakan citra ISO Debian dan Ubuntu.Dan
-						akan bertambah seiring berjalannya waktu. </p>
+					<img class="header-logo" src="assets/img/logo/klas.png" alt="">
+					<h2 class="animated fadeInDown" id="greetings"></h2>
+					<p class="animated fadeInUp">
+						Mirror ini merupakan persembahan KLAS kepada
+						komunitas F/OSS (Free/Open Source Software). Pada saat ini kami menyediakan repositori
+						Centos,Debian,Ubuntu,openSUSE, dan LibreOffice.
+						Selain itu kami juga menyediakan citra ISO Debian dan Ubuntu. Dan akan bertambah seiring
+						berjalannya waktu. </p>
+						<span class="animated fadeInUp" style="color: white; font-size: larger;"><i class="ri-arrow-down-s-line"></i></span>
 				</div>
 			</div>
 
-			<a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+			<!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -79,7 +79,7 @@
 			<a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
 				<span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
-			</a>
+			</a> -->
 
 		</div>
 
@@ -112,48 +112,42 @@
 					<p>Terima kasih kepada para sponsor</p>
 				</div>
 
-				<div class="row">
-					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up">
+				<div class="row member text-center" data-aos="fade-up">
+
+					<div class="col-lg-6 col-md-12">
+						<a href="https://indocenter.co.id/">
 							<div class="member-img">
-								<img src="assets/img/sponsor/openSUSE-ID-logo.png" class="img-fluid" alt="">
-								<div class="social">
-									<a href="https://opensuse.id/"><i class="icofont-web"></i></a>
-								</div>
+								<img src="assets/img/sponsor/indocenter.png" class="img-sponsor" alt="">
+							</div>
+							<div class="member-info">
+								<h4>INDOCENTER</h4>
+								<span>Hosting Murah Domain Murah Indonesia</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-12">
+						<a href="https://opensuse.id/">
+							<div class="member-img align-items-center">
+								<img src="assets/img/sponsor/openSUSE-ID-logo.png" class="img-sponsor" alt="">
 							</div>
 							<div class="member-info">
 								<h4>openSUSE.ID</h4>
 								<span>Komunitas openSUSE Indonesia</span>
 							</div>
-						</div>
+						</a>
 					</div>
 
-					<div class="col-lg-6 col-md-3 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up">
+					<div class="col-lg-3 col-md-12">
+						<a href="http://radnet-digital.id">
 							<div class="member-img">
-								<img src="assets/img/sponsor/indocenter.png" class="img-fluid" alt="">
-								<div class="social">
-									<a href="https://indocenter.co.id/"><i class="icofont-web"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>INDOCENTER</h4>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up">
-							<div class="member-img">
-								<img src="assets/img/sponsor/radnext.png" class="img-fluid" alt="">
-								<div class="social">
-									<a href="#"><i class="icofont-web"></i></a>
-								</div>
+								<img src="assets/img/sponsor/radnext.png" class="img-sponsor" alt="">
 							</div>
 							<div class="member-info">
 								<h4>RADNEXT</h4>
+								<span>Digital Solution Provider</span>
 							</div>
-						</div>
+						</a>
 					</div>
 
 				</div>
@@ -177,112 +171,132 @@
 				</ul>
 
 				<div class="row portfolio-container" data-aos="fade-up">
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-centos.png" class="img-fluid" alt="">
+					<a href="https://buaya.klas.or.id/centos/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-centos.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori Centos</h4>
+								<p>Repositori distro Centos</p>
+								<a href="assets/img/repo/repo-centos.png" class="venobox preview-link" title="Centos"><i
+										class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/centos/" class="details-link" title="More Details"><i
+										class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Repositori Centos</h4>
-							<p>Repositori distro Centos</p>
-							<a href="assets/img/repo/repo-centos.png" class="venobox preview-link" title="Centos"><i
-									class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/centos/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
+					</a>
+					<a href="https://buaya.klas.or.id/debian/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-debian.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori Debian</h4>
+								<p>Repositori distro Debian</p>
+								<a href="assets/img/repo/repo-debian.png" class="venobox preview-link" title="Debian"><i
+										class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/debian/" class="details-link" title="More Details"><i
+										class="bx bx-link"></i></a>
+							</div>
 						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-debian.png" class="img-fluid" alt="">
+					<a href="https://buaya.klas.or.id/debian-security/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-debian-security.png"
+									class="img-fluid" alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori Debian Security</h4>
+								<p>Repositori Debian Security</p>
+								<a href="assets/img/repo/repo-debian-security.png"" class=" venobox preview-link"
+									title="Debian"><i class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/debian-security/" class="details-link"
+									title="More Details"><i class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Repositori Debian</h4>
-							<p>Repositori distro Debian</p>
-							<a href="assets/img/repo/repo-debian.png" class="venobox preview-link" title="Debian"><i
-									class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/debian/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-debian-security.png" class="img-fluid"
-								alt="">
+					<a href="https://buaya.klas.or.id/iso/debian/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-iso">
+							<div class="portfolio-img"><img src="assets/img/iso/iso-debian.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Citra iso distro Debian</h4>
+								<p>Citra iso distro Debian</p>
+								<a href="assets/img/iso/iso-debian.png" class="venobox preview-link"
+									title="Citra iso Debian"><i class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/iso/debian/" class="details-link"
+									title="More Details"><i class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Repositori Debian Security</h4>
-							<p>Repositori Debian Security</p>
-							<a href="assets/img/repo/repo-debian-security.png"" class=" venobox preview-link"
-								title="Debian"><i class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/debian-security/" class="details-link"
-								title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-iso">
-						<div class="portfolio-img"><img src="assets/img/iso/iso-debian.png" class="img-fluid" alt="">
+					<a href="https://buaya.klas.or.id/iso/ubuntu/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-iso">
+							<div class="portfolio-img"><img src="assets/img/iso/iso-ubuntu.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Citra iso distro Ubuntu</h4>
+								<p>Citra iso distro Ubuntu</p>
+								<a href="assets/img/iso/iso-ubuntu.png" class="venobox preview-link"
+									title="Citra iso Ubuntu"><i class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/iso/ubuntu/" class="details-link"
+									title="More Details"><i class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Citra iso distro Debian</h4>
-							<p>Citra iso distro Debian</p>
-							<a href="assets/img/iso/iso-debian.png" class="venobox preview-link"
-								title="Citra iso Debian"><i class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/iso/debian/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-iso">
-						<div class="portfolio-img"><img src="assets/img/iso/iso-ubuntu.png" class="img-fluid" alt="">
+					<a href="https://buaya.klas.or.id/opensuse/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-opensuse.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori openSUSE</h4>
+								<p>Repositori distro openSUSE</p>
+								<a href="assets/img/repo/repo-opensuse.png" class="venobox preview-link"
+									title="openSUSE"><i class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/opensuse/" class="details-link"
+									title="More Details"><i class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Citra iso distro Ubuntu</h4>
-							<p>Citra iso distro Ubuntu</p>
-							<a href="assets/img/iso/iso-ubuntu.png" class="venobox preview-link"
-								title="Citra iso Ubuntu"><i class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/iso/ubuntu/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-opensuse.png" class="img-fluid"
-								alt="">
+					<a href="https://buaya.klas.or.id/tdf/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-libreoffice.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori aplikasi LibreOffice</h4>
+								<p>Repositori aplikasi LibreOffice</p>
+								<a href="assets/img/repo/repo-libreoffice.png" data-gall="portfolioGallery"
+									class="venobox preview-link" title="LibreOffice"><i class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/tdf/" class="details-link" title="More Details"><i
+										class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Repositori openSUSE</h4>
-							<p>Repositori distro openSUSE</p>
-							<a href="assets/img/repo/repo-opensuse.png" class="venobox preview-link" title="openSUSE"><i
-									class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/opensuse/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-libreoffice.png" class="img-fluid"
-								alt="">
+					<a href="https://buaya.klas.or.id/ubuntu/">
+						<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
+							<div class="portfolio-img"><img src="assets/img/repo/repo-ubuntu.png" class="img-fluid"
+									alt="">
+							</div>
+							<div class="portfolio-info">
+								<h4>Repositori Ubuntu</h4>
+								<p>Repositori distro Ubuntu</p>
+								<a href="assets/img/repo/repo-ubuntu.png" class="venobox preview-link" title="Ubuntu"><i
+										class="bx bx-plus"></i></a>
+								<a href="https://buaya.klas.or.id/ubuntu/" class="details-link" title="More Details"><i
+										class="bx bx-link"></i></a>
+							</div>
 						</div>
-						<div class="portfolio-info">
-							<h4>Repositori aplikasi LibreOffice</h4>
-							<p>Repositori aplikasi LibreOffice</p>
-							<a href="assets/img/repo/repo-libreoffice.png" data-gall="portfolioGallery"
-								class="venobox preview-link" title="LibreOffice"><i class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/tdf/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-repo">
-						<div class="portfolio-img"><img src="assets/img/repo/repo-ubuntu.png" class="img-fluid" alt="">
-						</div>
-						<div class="portfolio-info">
-							<h4>Repositori Ubuntu</h4>
-							<p>Repositori distro Ubuntu</p>
-							<a href="assets/img/repo/repo-ubuntu.png" class="venobox preview-link" title="Ubuntu"><i
-									class="bx bx-plus"></i></a>
-							<a href="https://buaya.klas.or.id/ubuntu/" class="details-link" title="More Details"><i
-									class="bx bx-link"></i></a>
-						</div>
-					</div>
+					</a>
 
 				</div>
 			</div>
@@ -400,6 +414,7 @@
 	<script src="assets/vendor/venobox/venobox.min.js"></script>
 	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
 
 	<!-- Template Main JS File -->
 	<script src="js/main.js"></script>

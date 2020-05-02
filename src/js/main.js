@@ -195,3 +195,10 @@
   });
 
 })(jQuery);
+
+new TypeIt("#greetings", {
+  strings: "Selamat datang di <strong>Buaya</strong>",
+  speed: 50,
+  startDelay: 1200,
+  waitUntilVisible: true
+}).go();
