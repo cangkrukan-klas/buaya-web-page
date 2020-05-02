@@ -15,17 +15,15 @@
   "author": "Fadhil Yori Hibatullah <fadhil4812@gmail.com>",
   "license": "GPL-2.0",
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
+    "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "lite-server": "^2.5.4",
-    "rimraf": "^3.0.2"
+    "lite-server": "^2.5.4"
   },
   "scripts": {
     "build": "gulp",

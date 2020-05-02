@@ -1,43 +1,37 @@
-const { src, dest, watch, series, parallel, task } = require('gulp');
-const concat = require('gulp-concat');
-const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
-const sourcemaps = require('gulp-sourcemaps');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const replace = require('gulp-replace');
-const rimraf = require('rimraf');
+const { src, dest, watch, series, parallel, task } = require('gulp')
+const uglify = require('gulp-uglify')
+const sourcemaps = require('gulp-sourcemaps')
+const replace = require('gulp-replace')
+const del = require('del')
+const cleanCSS = require('gulp-clean-css')
 
-const scssPath = './src/scss/**/*.scss'
+const cssPath = './src/css/**/*.css'
 const jsPath = './src/js/**/*.js'
-const imagesPath = './src/images/*'
-const faviconPath = './src/favicon.ico'
-const fontsPath = './src/fonts/*'
+const assetsPath = './src/assets/**/*'
 
-var cbString = new Date().getTime();
+var cbString = new Date().getTime()
 
-function cleanDist(cb) {
-    rimraf('./dist/*', function () {
-        console.log('Dist directory now empty!')
-    });
-    cb();
+function cleanDist() {
+    return del(['dist/**', 'dist'], {force: true})
 }
 
-function scssTask() {
-    return src(scssPath)
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('./dist/css'));
+function cssTask() {
+    return src(cssPath)
+      .pipe(sourcemaps.init())
+      .pipe(
+        cleanCSS({ level: 2, debug: true }, (details) => {
+          console.log(`${details.name}: ${details.stats.originalSize}`)
+          console.log(`${details.name}: ${details.stats.minifiedSize}`)
+        })
+      )
+      .pipe(sourcemaps.write())
+      .pipe(dest("./dist/css"))
 }
 
 function jsTask() {
     return src([jsPath])
-        .pipe(concat('all.js'))
         .pipe(uglify())
-        .pipe(dest('./dist/js'));
+        .pipe(dest('./dist/js'))
 }
 
 function cacheBustTask() {
@@ -46,41 +40,34 @@ function cacheBustTask() {
         .pipe(dest('./dist'))
 }
 
-function imageTask() {
-    return src(imagesPath)
-        .pipe(dest('./dist/images'));
-}
-
-function faviconTask() {
-    return src(faviconPath)
-        .pipe(dest('./dist'));
-}
-
-function fontsTask() {
-    return src(fontsPath)
-        .pipe(dest('./dist/fonts'));
+function assetsTask() {
+    return src(assetsPath)
+        .pipe(dest('./dist/assets'))
 }
 
 function watchTask() {
     watch(
-        [scssPath, jsPath, imagesPath, faviconPath, fontsPath], 
+        [cssPath, jsPath, assetsPath],
         {interval: 1000, usePolling: true},
         series(
-            parallel(scssTask, jsTask, imageTask, faviconTask, fontsTask),
+            cleanDist,
+            parallel(cssTask, jsTask, assetsTask),
             cacheBustTask
         ),
     )
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask, imageTask, faviconTask, fontsTask),
+    cleanDist,
+    parallel(cssTask, jsTask, assetsTask),
     cacheBustTask,
-);
+)
 
 exports.watch = series(
-    parallel(scssTask, jsTask, imageTask, faviconTask, fontsTask),
+    cleanDist,
+    parallel(cssTask, jsTask, assetsTask),
     cacheBustTask,
     watchTask
-);
+)
 
 exports.cleanDist = task(cleanDist)
