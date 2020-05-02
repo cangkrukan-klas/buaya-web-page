@@ -35,7 +35,7 @@ function jsTask() {
 }
 
 function cacheBustTask() {
-    return src(['./src/index.html'])
+    return src(['./src/index.html', './src/404.html', './src/500.html'])
         .pipe(replace(/cb=\d+/, 'cb=' + cbString))
         .pipe(dest('./dist'))
 }
