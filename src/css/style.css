@@ -1642,8 +1642,8 @@ section {
 }
 
 .header-logo {
-  height: auto;
-  width: auto;
+  max-height: 40vh;
+  max-width: 100%;
   margin-top: 5vh;
   margin-bottom: 10vh;
 }
