@@ -20,16 +20,18 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-purgecss": "^2.1.2",
     "gulp-replace": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
     "lite-server": "^2.5.4"
   },
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch",
-    "serve": "lite-server --baseDir='./dist'",
-    "dev": "lite-server --baseDir='./src'",
+    "serve": "lite-server -c ./configs/prod.js",
+    "prod": "gulp && lite-server -c ./configs/prod.js",
+    "dev": "lite-server -c ./configs/dev.js",
     "clean:dist": "gulp cleanDist"
   }
 }
